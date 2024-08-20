@@ -34,8 +34,9 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   ],
   callbacks: {
     async jwt({ token, user, trigger }) {
+      console.log("before jwt: ", token, "\nuser: ", user);
       if (user) {
-        token._id = user.id;
+        token._id = user._id;
         token.isAdmin = user.isAdmin;
       }
 
