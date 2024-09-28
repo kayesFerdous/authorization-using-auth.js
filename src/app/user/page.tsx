@@ -86,7 +86,7 @@ export default function UserPage() {
       <>
         You are not logged in.
         <br />
-        <button onClick={() => signIn("github")}>Sign In</button>
+        <button onClick={() => signIn()}>Sign In</button>
       </>
     );
   }
